@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="gbk"?>
+<Context docBase="E:\\MyEclipseWorkSpace\\day21_1\\WebRoot">
+    <Manager className="org.apache.catalina.session.PersistentManager" saveOnRestart="true">
+        <Store className="org.apache.catalina.session.FileStore" directory="Sessions">
+        </Store>
+    </Manager>
+</Context>
