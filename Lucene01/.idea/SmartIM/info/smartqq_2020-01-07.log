@@ -1,0 +1,13 @@
+2020-01-07 10:51:27.713 [Thread-13] INFO  io.github.biezhi.wechat.api.WechatClient -
+				[*] 正在获取 uuid ... 
+2020-01-07 10:51:27.950 [Thread-13] INFO  io.github.biezhi.wechat.api.WechatClient -
+				[*] 正在获取二维码 ... 成功
+
+2020-01-07 10:51:29.050 [Thread-13] INFO  io.github.biezhi.wechat.api.WechatClient -
+				[*] 请使用微信扫描二维码以登录 ... 
+
+2020-01-07 10:51:53.406 [Thread-13] INFO  io.github.biezhi.wechat.api.WechatClient -
+				[*] 请在手机上点击确认以登录 ... 
+
+2020-01-07 10:51:56.966 [Thread-13] INFO  io.github.biezhi.wechat.api.WechatApi -
+				[*] 设置cookie []

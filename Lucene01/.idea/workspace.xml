@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6870a80f-f6b7-4c8e-83b1-49049d0bdee7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="xml" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VyjdxsCeKm260dFGZ66RA4u0oM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="F:/致远OA/致远资料/0_致远源码/7.1SP1" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\1\Lucene01\src\main\resources" />
+      <recent name="D:\1\Lucene01\src\main\resources\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestAnalyzer">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="TestAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lucene.dao.TestAnalyzer" />
+      <module name="Lucene01" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lucene.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQuery.fuzzyQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lucene01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestQuery" />
+      <option name="METHOD_NAME" value="fuzzyQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQuery.phraseQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lucene01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestQuery" />
+      <option name="METHOD_NAME" value="phraseQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQuery.testboolean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lucene01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestQuery" />
+      <option name="METHOD_NAME" value="testboolean" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQuery.wildQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lucene01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestQuery" />
+      <option name="METHOD_NAME" value="wildQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestAnalyzer" />
+        <item itemvalue="JUnit.TestQuery.testboolean" />
+        <item itemvalue="JUnit.TestQuery.phraseQuery" />
+        <item itemvalue="JUnit.TestQuery.fuzzyQuery" />
+        <item itemvalue="JUnit.TestQuery.wildQuery" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6870a80f-f6b7-4c8e-83b1-49049d0bdee7" name="Default Changelist" comment="" />
+      <created>1578232319110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578232319110</updated>
+      <workItem from="1578232323922" duration="6001000" />
+      <workItem from="1578270438063" duration="4109000" />
+      <workItem from="1578299301549" duration="1627000" />
+      <workItem from="1578301316589" duration="2349000" />
+      <workItem from="1578357178650" duration="11194000" />
+      <workItem from="1578379544650" duration="2825000" />
+      <workItem from="1578386693612" duration="663000" />
+      <workItem from="1578549785808" duration="11388000" />
+      <workItem from="1578616429798" duration="19355000" />
+      <workItem from="1578702540563" duration="2824000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="92" key="#Project_Structure" timestamp="1578232487476">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="392" y="92" key="#Project_Structure/0.0.1600.870@0.0.1600.870" timestamp="1578232487476" />
+    <state x="547" y="236" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578238835539">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="547" y="236" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.870@0.0.1600.870" timestamp="1578238835539" />
+    <state x="2222" y="-54" key="#com.intellij.ide.util.MemberChooser" timestamp="1578619186220">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2222" y="-54" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578619186220" />
+    <state x="2259" y="284" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1578365810237">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2259" y="284" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578365810237" />
+    <state width="433" height="466" key="DebuggerActiveHint" timestamp="1578303605719">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="433" height="466" key="DebuggerActiveHint/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578303605719" />
+    <state x="1930" y="-96" key="FileChooserDialogImpl" timestamp="1578711362999">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="1930" y="-96" key="FileChooserDialogImpl/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578711362999" />
+    <state width="1876" height="402" key="GridCell.Tab.0.bottom" timestamp="1578648897616">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897616" />
+    <state width="1556" height="139" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1578239000889" />
+    <state width="1876" height="402" key="GridCell.Tab.0.center" timestamp="1578648897616">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.0.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897616" />
+    <state width="1556" height="139" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1578239000889" />
+    <state width="1876" height="402" key="GridCell.Tab.0.left" timestamp="1578648897616">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.0.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897616" />
+    <state width="1556" height="139" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1578239000889" />
+    <state width="1876" height="402" key="GridCell.Tab.0.right" timestamp="1578648897616">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.0.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897616" />
+    <state width="1556" height="139" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1578239000889" />
+    <state width="1876" height="402" key="GridCell.Tab.1.bottom" timestamp="1578648897617">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.1.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897617" />
+    <state width="1876" height="402" key="GridCell.Tab.1.center" timestamp="1578648897617">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.1.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897617" />
+    <state width="1876" height="402" key="GridCell.Tab.1.left" timestamp="1578648897616">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.1.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897616" />
+    <state width="1876" height="402" key="GridCell.Tab.1.right" timestamp="1578648897617">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="402" key="GridCell.Tab.1.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578648897617" />
+    <state x="2090" y="14" key="Maven.ArtifactSearchDialog" timestamp="1578380728879">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2090" y="14" key="Maven.ArtifactSearchDialog/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578380728879" />
+    <state x="1888" y="-147" key="SettingsEditor" timestamp="1578302959770">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="1888" y="-147" key="SettingsEditor/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578302959770" />
+    <state x="280" y="8" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1578238311742" />
+    <state x="520" y="191" key="search.everywhere.popup" timestamp="1578234499998">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="520" y="191" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1578234499998" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/lu/demo1/FileLuceneTest.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/lu/demo1/FileLuceneTest.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucene/dao/LuceneDao.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/test/TestQuery.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lucene/dao/TestAnalyzer.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Lucene01</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven-version>3.5</maven-version>
+        <jdk-version>1.8</jdk-version>
+        <lucene-version>8.4.0</lucene-version>
+        <ikAnalyzer-version>8.0.0</ikAnalyzer-version>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>${lucene-version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>${lucene-version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queryparser -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>${lucene-version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-memory -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-memory</artifactId>
+            <version>${lucene-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-highlighter -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-highlighter</artifactId>
+            <version>${lucene-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queries -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queries</artifactId>
+            <version>${lucene-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.jianggujin/IKAnalyzer-lucene -->
+        <dependency>
+            <groupId>com.jianggujin</groupId>
+            <artifactId>IKAnalyzer-lucene</artifactId>
+            <version>${ikAnalyzer-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.esen.ikanalyzer/ikanalyzer -->
+<!--        <dependency>-->
+<!--            <groupId>com.esen.ikanalyzer</groupId>-->
+<!--            <artifactId>ikanalyzer</artifactId>-->
+<!--            <version>2012ff</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/src/main/resources/lib/IKAnalyzer2012FF_u1.jar</systemPath>-->
+<!--        </dependency>-->
+
+        <!-- ikanalyzer 中文分词器  -->
+        <dependency>
+            <groupId>com.janeluo</groupId>
+            <artifactId>ikanalyzer</artifactId>
+            <version>2012_u6</version>
+            <!--排除掉里面旧的lucene包，因为我们要重写里面的分析器和分词器  -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.lucene</groupId>
+                    <artifactId>lucene-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.lucene</groupId>
+                    <artifactId>lucene-queryparser</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.lucene</groupId>
+                    <artifactId>lucene-analyzers-common</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13-rc-2</version>
+<!--            <scope>test</scope>-->
+        </dependency>
+
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-version}</version>
+                <configuration>
+                    <!-- 源码的编译器版本 -->
+                    <source>${jdk-version}</source>
+                    <!-- class的编译器版本 -->
+                    <target>${jdk-version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
