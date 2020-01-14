@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/main_head::mainHeader"></head>
+<title>添加用户</title>
+<body>
+<form th:action="@{/user/doSave}" method="post">
+    用户姓名：<input type="text" name="username"/><br/>
+    用户密码：<input type="text" name="password"/><br/>
+    <input type="submit" value="确定"/><br/>
+</form>
+</body>
+</html>

@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10ed1114-4e66-4fc3-93c1-0b9e6199cb2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/FileUploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/filter/FirstFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/listener/FileUploadProgressListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/listener/FirstListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/progress/CustomMultipartResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/progress/Progress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/servlet/FirstServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-server.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-templet.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/main_head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/views/fileupload/upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/views/user/addUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lucene01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lucene01/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lucene01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lucene01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sbsm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbsm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-templet.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-templet.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/views/fileupload/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/views/fileupload/upload.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
       </list>
@@ -47,6 +45,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1WKbi484gmV8KhNd84v5SN2fDLr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -63,20 +64,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/JAVA_D/javaSources/2018_11_play/StudySpringboot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.AdvancedConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\gitcode\study-java\sbsm\src\main\resources\templates\views\fileupload" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitcode\study-java\sbsm\src\main\java\cn\cheng\sbsm\mapper" />
+      <recent name="D:\gitcode\study-java\sbsm\src\main\resources" />
+      <recent name="D:\gitcode\study-java\sbsm\src\main\webapp\WEB-INF" />
+      <recent name="D:\gitcode\study-java\sbsm\src\main\webapp\WEB-INF\html\fileupload" />
+      <recent name="D:\gitcode\study-java\sbsm\src\main\webapp\WEB-INF\jsp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.cheng.sbsm.controller" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\gitcode\study-java\sbsm\src\main\resources\static" />
-      <recent name="D:\gitcode\study-java\sbsm\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\gitcode\study-java\sbsm\src\main\resources\templates\views\fileupload" />
     </key>
   </component>
   <component name="RunManager">
@@ -149,96 +153,155 @@
       <updated>1578901356786</updated>
       <workItem from="1578901362755" duration="5960000" />
       <workItem from="1578961476979" duration="3462000" />
-      <workItem from="1578966061153" duration="9100000" />
+      <workItem from="1578966061153" duration="15965000" />
+      <workItem from="1578991478523" duration="4362000" />
     </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1578980060548</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578980060548</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add">
+      <created>1578988223369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578988223369</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add">
+      <created>1578992958027</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578992958027</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2326" y="-2" key="#com.intellij.ide.util.MemberChooser" timestamp="1578965160198">
+    <state x="2014" y="14" width="1160" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578980444640">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2014" y="14" width="1160" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578980444640" />
+    <state x="2326" y="-2" key="#com.intellij.ide.util.MemberChooser" timestamp="1578992883088">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state x="605" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578904850113" />
-    <state x="2326" y="-2" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578965160198" />
-    <state x="1840" y="-39" width="1152" height="678" key="FileChooserDialogImpl" timestamp="1578972398909">
+    <state x="2326" y="-2" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578992883088" />
+    <state x="2057" y="-51" key="CommitChangelistDialog2" timestamp="1578992957122">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2057" y="-51" key="CommitChangelistDialog2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578992957122" />
+    <state width="409" height="466" key="DebuggerActiveHint" timestamp="1578994062418">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state width="409" height="466" key="DebuggerActiveHint/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578994062418" />
+    <state x="1840" y="-39" width="1152" height="678" key="FileChooserDialogImpl" timestamp="1578990546706">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state x="603" y="219" key="FileChooserDialogImpl/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578903185027" />
-    <state x="1840" y="-39" width="1152" height="678" key="FileChooserDialogImpl/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578972398909" />
-    <state width="1876" height="312" key="GridCell.Tab.0.bottom" timestamp="1578974203119">
+    <state x="1840" y="-39" width="1152" height="678" key="FileChooserDialogImpl/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578990546706" />
+    <state width="1876" height="459" key="GridCell.Tab.0.bottom" timestamp="1578995978237">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293672" />
-    <state width="1876" height="312" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974203119" />
-    <state width="1876" height="312" key="GridCell.Tab.0.center" timestamp="1578974203119">
+    <state width="1876" height="459" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995978237" />
+    <state width="1876" height="459" key="GridCell.Tab.0.center" timestamp="1578995978237">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.center/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293671" />
-    <state width="1876" height="312" key="GridCell.Tab.0.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974203119" />
-    <state width="1876" height="312" key="GridCell.Tab.0.left" timestamp="1578974203119">
+    <state width="1876" height="459" key="GridCell.Tab.0.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995978237" />
+    <state width="1876" height="459" key="GridCell.Tab.0.left" timestamp="1578995978237">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.left/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293671" />
-    <state width="1876" height="312" key="GridCell.Tab.0.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974203119" />
-    <state width="1876" height="312" key="GridCell.Tab.0.right" timestamp="1578974203119">
+    <state width="1876" height="459" key="GridCell.Tab.0.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995978237" />
+    <state width="1876" height="459" key="GridCell.Tab.0.right" timestamp="1578995978237">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.right/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293672" />
-    <state width="1876" height="312" key="GridCell.Tab.0.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974203119" />
-    <state width="1876" height="346" key="GridCell.Tab.1.bottom" timestamp="1578974374351">
+    <state width="1876" height="459" key="GridCell.Tab.0.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995978237" />
+    <state width="1876" height="459" key="GridCell.Tab.1.bottom" timestamp="1578995971141">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.bottom/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="346" key="GridCell.Tab.1.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974374351" />
-    <state width="1876" height="346" key="GridCell.Tab.1.center" timestamp="1578974374350">
+    <state width="1876" height="459" key="GridCell.Tab.1.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995971141" />
+    <state width="1876" height="459" key="GridCell.Tab.1.center" timestamp="1578995971141">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.center/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="346" key="GridCell.Tab.1.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974374350" />
-    <state width="1876" height="346" key="GridCell.Tab.1.left" timestamp="1578974374350">
+    <state width="1876" height="459" key="GridCell.Tab.1.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995971141" />
+    <state width="1876" height="459" key="GridCell.Tab.1.left" timestamp="1578995971140">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.left/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293571" />
-    <state width="1876" height="346" key="GridCell.Tab.1.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974374350" />
-    <state width="1876" height="346" key="GridCell.Tab.1.right" timestamp="1578974374350">
+    <state width="1876" height="459" key="GridCell.Tab.1.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995971140" />
+    <state width="1876" height="459" key="GridCell.Tab.1.right" timestamp="1578995971141">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.right/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="346" key="GridCell.Tab.1.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974374350" />
-    <state width="1876" height="312" key="GridCell.Tab.2.bottom" timestamp="1578974202916">
+    <state width="1876" height="459" key="GridCell.Tab.1.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995971141" />
+    <state width="1876" height="366" key="GridCell.Tab.2.bottom" timestamp="1578995943184">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.bottom/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293573" />
-    <state width="1876" height="312" key="GridCell.Tab.2.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974202916" />
-    <state width="1876" height="312" key="GridCell.Tab.2.center" timestamp="1578974202915">
+    <state width="1876" height="366" key="GridCell.Tab.2.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995943184" />
+    <state width="1876" height="366" key="GridCell.Tab.2.center" timestamp="1578995943184">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.center/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293573" />
-    <state width="1876" height="312" key="GridCell.Tab.2.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974202915" />
-    <state width="1876" height="312" key="GridCell.Tab.2.left" timestamp="1578974202915">
+    <state width="1876" height="366" key="GridCell.Tab.2.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995943184" />
+    <state width="1876" height="366" key="GridCell.Tab.2.left" timestamp="1578995943184">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.left/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="312" key="GridCell.Tab.2.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974202915" />
-    <state width="1876" height="312" key="GridCell.Tab.2.right" timestamp="1578974202916">
+    <state width="1876" height="366" key="GridCell.Tab.2.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995943184" />
+    <state width="1876" height="366" key="GridCell.Tab.2.right" timestamp="1578995943184">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.right/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293573" />
-    <state width="1876" height="312" key="GridCell.Tab.2.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578974202916" />
+    <state width="1876" height="366" key="GridCell.Tab.2.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578995943184" />
+    <state x="2152" y="92" key="Vcs.Push.Dialog.v2" timestamp="1578992959678">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2152" y="92" key="Vcs.Push.Dialog.v2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578992959678" />
     <state x="1692" y="-88" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578961995532">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state x="1692" y="-88" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578961995532" />
+    <state x="2223" y="55" width="672" height="678" key="search.everywhere.popup" timestamp="1578980205466">
+      <screen x="1600" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2223" y="55" width="672" height="678" key="search.everywhere.popup/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1578980205466" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/FileUploadController.java</url>
-          <line>32</line>
+          <line>41</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/UrlController.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/UserController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
