@@ -25,7 +25,9 @@ public class FileUploadController extends BaseController {
 
     @RequestMapping(value = "/toUpload")
     public ModelAndView toUpload() {
+//        不集成jsp使用这种方式
         return new ModelAndView(VIEW_PATH + "fileupload/upload");
+//        return new ModelAndView("html/fileupload/upload");
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)

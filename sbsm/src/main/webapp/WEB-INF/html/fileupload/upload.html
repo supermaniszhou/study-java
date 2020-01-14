@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/main_head::mainHeader"></head>
+<title>文件上传</title>
+<script>
+    $(function () {
+    });
+</script>
+<body>
+<form id="upload_form" action="upload" method="post" enctype="multipart/form-data">
+    <!--<form id="upload_form"  method="post" enctype="multipart/form-data">-->
+    上传文件：<input type="file" name="filename"/><br/>
+    <input type="submit"/>
+    <!--    <input onclick="uploadFile()" type="submit"/>-->
+</form>
+</body>
+</html>
