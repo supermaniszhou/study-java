@@ -1,5 +1,6 @@
 package cn.cheng.sbsm;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -9,6 +10,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 //在springBoot启动时会扫描@WebServlet，并将该类实例化
 @ServletComponentScan
+//用于mybatis 扫描mapper 接口
+@MapperScan(basePackages = {"cn.cheng.sbsm.mapper"})
 public class SbsmApplication {
 
     public static void main(String[] args) {

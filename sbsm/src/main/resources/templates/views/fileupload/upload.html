@@ -13,5 +13,45 @@
     <input type="submit"/>
     <!--    <input onclick="uploadFile()" type="submit"/>-->
 </form>
+<span th:text="${msg}"></span>
+<span th:if="${#strings.isEmpty(msg)}">jjjjj</span>
+<span th:if="${#strings.isEmpty(kong)}">kong</span>
+<hr/>
+<span th:text="${#strings.contains(msg,'9')}"></span>
+<span th:text="${#strings.contains(msg,'T')}"></span>
+<hr/>
+<span th:text="${#strings.startsWith(msg,'a')}"></span>
+<span th:text="${#strings.startsWith(msg,'T')}"></span>
+<hr/>
+<span th:text="${#strings.endsWith(msg,'a')}"></span>
+<span th:text="${#strings.endsWith(msg,'案例')}"></span>
+<hr/>
+<span th:text="${#strings.length(msg)}"></span>
+<hr/>
+<span th:text="${#dates.format(key)}"></span>
+<hr/>
+<span th:text="${#dates.format(key,'yyyy-MM-dd HH:mm:ss')}"></span>
+<hr/>
+<span th:text="${#dates.year(key)}"></span>
+<span th:text="${#dates.month(key)}"></span>
+<span th:text="${#dates.day(key)}"></span>
+<hr/>
+<!--/*@thymesVar id="sex" type="java"*/-->
+<span th:if="${sex} == '男'">
+		性别：男
+	</span>
+<span th:if="${sex} == '女'">
+		性别：女
+	</span>
+<hr/>
+<!--/*@thymesVar id="id" type="java"*/-->
+<div th:switch="${id}">
+    <span th:case="1">ID为1</span>
+    <span th:case="2">ID为2</span>
+    <span th:case="3">ID为3</span>
+</div>
+<a th:href="@{/show(id=1,name=zhagnsan)}">相对路径-传参</a>
+<hr/>
+<a th:href="@{/path/{id}/show(id=1,name=zhagnsan)}">相对路径-传参-restful</a>
 </body>
 </html>

@@ -12,6 +12,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,14 @@ public class FileUploadController extends BaseController {
 
     @RequestMapping(value = "/toUpload")
     public ModelAndView toUpload() {
-//        不集成jsp使用这种方式
-        return new ModelAndView(VIEW_PATH + "fileupload/upload");
+        //        不集成jsp使用这种方式
+        ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "fileupload/upload");
+        modelAndView.addObject("msg", "Thymeleaf 第一个案例");
+        modelAndView.addObject("key", new Date());
+        modelAndView.addObject("kong", "");
+        modelAndView.addObject("sex", "女");
+        modelAndView.addObject("id","1");
+        return modelAndView;
 //        return new ModelAndView("html/fileupload/upload");
     }
 
