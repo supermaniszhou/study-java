@@ -3,6 +3,7 @@ package cn.cheng.sbsm.controller;
 import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,11 +29,15 @@ public class UserController extends BaseController {
     }
 
     @PostMapping(value = "/doSave")
-    public Map<String, Object> doSave(User user, HttpServletRequest request) {
-        user.setId(1);
+    public ModelAndView doSave(@Validated User user, HttpServletRequest request) {
+        user.setId((int) (Math.random() * 10000 + 1));
         user.setRole("admin");
-        userService.insertUser(user);
-        return responseTo("0", "success");
+        try {
+            userService.insertUser(user);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return new ModelAndView("forward:toListPage");
     }
 
     @RequestMapping(value = "/toListPage")

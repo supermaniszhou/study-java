@@ -5,20 +5,20 @@
 <mapper namespace="cn.cheng.sbsm.mapper.UserMapper">
 
     <resultMap id="userMap" type="cn.cheng.sbsm.pojo.User">
-        <id column="id" property="id"/>
-        <result column="username" property="username"/>
-        <result column="password" property="password"/>
-        <result column="role" property="role"/>
+        <id column="ID" property="id"/>
+        <result column="USERNAME" property="username"/>
+        <result column="PASSWORD" property="password"/>
+        <result column="ROLE" property="role"/>
     </resultMap>
     <sql id="userColumnList">
-        id,username,password,role
+        ID,USERNAME,PASSWORD,ROLE
     </sql>
     <insert id="insertUser" parameterType="User">
-		insert into user(id,password,role,username) values(#{id},#{password},#{role},#{username})
+		insert into SYS_USER(id,password,role,username) values(#{id},#{password},#{role},#{username})
 	</insert>
 
     <update id="updateUser" parameterType="User">
-        update user
+        update SYS_USER
         <trim prefix="set" suffixOverrides=",">
             <if test="username !=null and username !=''">
                 username = #{username},
@@ -36,16 +36,16 @@
     </update>
 
     <delete id="deleteUserById" parameterType="int">
-        delete from user where id =#{id}
+        delete from SYS_USER where id =#{id}
     </delete>
 
     <select id="selectAllUser" resultMap="userMap">
-        select <include refid="userColumnList"></include> from user
+        select <include refid="userColumnList"></include> from SYS_USER
 
     </select>
 
     <select id="selectUserById" parameterType="int" resultMap="userMap">
-        select <include refid="userColumnList"></include> from user
+        select <include refid="userColumnList"></include> from SYS_USER
         <where>
             <if test="id!=0">
                 and id = #{id}
