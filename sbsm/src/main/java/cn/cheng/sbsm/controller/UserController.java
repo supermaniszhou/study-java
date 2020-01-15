@@ -58,7 +58,8 @@ public class UserController extends BaseController {
 
     @PostMapping(value = "/doEdit")
     public ModelAndView doEdit(User user) {
-        ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/listUser");
+        //在modelAndView中使用redirect重定向，使用forward完成转发
+        ModelAndView modelAndView = new ModelAndView("forward:toListPage");
         try {
             userService.updateUser(user);
         } catch (Exception e) {

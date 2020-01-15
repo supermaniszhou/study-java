@@ -3,7 +3,8 @@
 <head th:include="/common/main_head::mainHeader"></head>
 <title>添加用户</title>
 <body>
-<form th:action="@{/user/doSave}" method="post">
+<form th:action="@{/user/doEdit}" method="post">
+    <input type="hidden" name="id" th:value="${user.id}">
     用户姓名：<input type="text" name="username" th:value="${user.username}"/><br/>
     用户密码：<input type="text" name="password" th:value="${user.password}"/><br/>
     <input type="submit" value="确定"/><br/>
