@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="/common/main_head::mainHeader"></head>
+<title>列表展示</title>
+<body>
+<table>
+    <thead>
+    <th>姓名</th>
+    <th>角色</th>
+    <th>操作</th>
+    </thead>
+    <tbody>
+    <tr th:each="user:${list}">
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.role}"></td>
+        <td>
+            <a th:href="@{toEdit(id=${user.id})}">更新用户</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

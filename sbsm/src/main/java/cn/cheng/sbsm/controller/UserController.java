@@ -3,12 +3,11 @@ package cn.cheng.sbsm.controller;
 import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 
@@ -34,5 +33,37 @@ public class UserController extends BaseController {
         user.setRole("admin");
         userService.insertUser(user);
         return responseTo("0", "success");
+    }
+
+    @RequestMapping(value = "/toListPage")
+    public ModelAndView toListPage() {
+        ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/listUser");
+        List<User> list = userService.selectAllUser();
+        modelAndView.addObject("list", list);
+        return modelAndView;
+    }
+
+    @GetMapping(value = "/toEdit")
+    public ModelAndView toEdit(Integer id) {
+        ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/editUser");
+        User user = null;
+        try {
+            user = userService.selectUserById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        modelAndView.addObject("user", user);
+        return modelAndView;
+    }
+
+    @PostMapping(value = "/doEdit")
+    public ModelAndView doEdit(User user) {
+        ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/listUser");
+        try {
+            userService.updateUser(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return modelAndView;
     }
 }

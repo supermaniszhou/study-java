@@ -17,16 +17,31 @@
 		insert into user(id,password,role,username) values(#{id},#{password},#{role},#{username})
 	</insert>
 
+    <update id="updateUser" parameterType="User">
+        update user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="username !=null and username !=''">
+                username = #{username},
+            </if>
+            <if test="password !=null and password !=''">
+                password = #{password},
+            </if>
+            <if test="role !=null and role !=''">
+                role = #{role},
+            </if>
+        </trim>
+        <where>
+            id =#{id}
+        </where>
+    </update>
+
+    <delete id="deleteUserById" parameterType="int">
+        delete from user where id =#{id}
+    </delete>
+
     <select id="selectAllUser" resultMap="userMap">
         select <include refid="userColumnList"></include> from user
-        <where>
-            <if test="id!=0">
-                and id=#{id}
-            </if>
-            <if test="username!=null and username !=''">
-                and username=#{username}
-            </if>
-        </where>
+
     </select>
 
     <select id="selectUserById" parameterType="int" resultMap="userMap">
