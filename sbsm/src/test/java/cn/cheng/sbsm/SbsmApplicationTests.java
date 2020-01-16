@@ -5,12 +5,15 @@ import cn.cheng.sbsm.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * SpringBoot测试类
@@ -26,42 +29,96 @@ import java.util.List;
 class SbsmApplicationTests {
 
     @Autowired
-    private UserService userService;
-
-    @Autowired
-    private StringRedisTemplate redisTemplate;
+    @Qualifier("objectRedisTemplate")
+    private RedisTemplate<String, Object> rts;
 
     @Test
     void contextLoads() {
-        List<User> list = userService.selectAllUser();
-        list.stream().forEach(u -> {
-            System.out.println(u.toString());
-        });
+        //向redis中写入缓存
+        User user = new User();
+        user.setId(100);
+        user.setUsername("zhangsan");
+        user.setPassword("111111");
+        user.setRole("admin");
+        rts.opsForValue().set("user", user);
+//        System.out.println(rts.opsForValue().get(user.getUsername()));
     }
 
     @Test
-    void testCache() {
-//        第一次查询
-        List<User> list = userService.selectAllUser();
+    void tetCreateString() {
+        rts.opsForValue().set("name", "tom");
+    }
+
+    @Test
+    void get() {
+        LinkedHashMap map = (LinkedHashMap) rts.opsForValue().get("user");
+        System.out.println(map.toString());
+    }
+//    @Autowired
+//    private UserService userService;
+
+//    @Autowired
+//    private StringRedisTemplate redisTemplate;
+
+//    @Autowired
+//    private RedisTemplate<String, Object> redisTemplate2;
+//
+//    @Test
+//    void contextLoads() {
+//        User user = new User();
+//        user.setId(100);
+//        user.setUsername("zhangsan");
+//        user.setPassword("111111");
+//        user.setRole("admin");
+//        redisTemplate2.opsForValue().set(user.getUsername(), user);
+//        System.out.println(redisTemplate2.opsForValue().get(user.getUsername()));
+//
+//
+//    }
+
+//    @Test
+//    void contextLoads() {
+//        List<User> list = userService.selectAllUser();
 //        list.stream().forEach(u -> {
 //            System.out.println(u.toString());
 //        });
-//        第er次查询
-        List<User> list2 = userService.selectAllUser();
-        list2.stream().forEach(u -> {
-            System.out.println(u.toString());
-        });
-    }
+//    }
+//
+//    @Test
+//    void testCache() {
+////        第一次查询
+//        List<User> list = userService.selectAllUser();
+////        list.stream().forEach(u -> {
+////            System.out.println(u.toString());
+////        });
+////        第er次查询
+//        List<User> list2 = userService.selectAllUser();
+//        list2.stream().forEach(u -> {
+//            System.out.println(u.toString());
+//        });
+//    }
+//
+//    @Test
+//    void testRedis() {
+//        redisTemplate.opsForValue().set("a", "test");
+//    }
+//
+//    @Test
+//    void testRedisget() {
+//        String s = redisTemplate.opsForValue().get("a");
+//        System.out.println(s);
+//    }
+//
+//    @Test
+//    void testRedisUtil() {
+//        User user = new User();
+//        user.setId(100);
+//        user.setUsername("zhangsan");
+//        user.setPassword("111111");
+//        user.setRole("admin");
+//        this.redisTemplate.setValueSerializer(new JdkSerializationRedisSerializer());
+//        redisTemplate.opsForValue().set("users", String.valueOf(user));
+//    }
 
-    @Test
-    void testRedis() {
-        redisTemplate.opsForValue().set("a", "test");
-    }
-
-    @Test
-    void testRedisget() {
-        String s = redisTemplate.opsForValue().get("a");
-        System.out.println(s);
-    }
 
 }
