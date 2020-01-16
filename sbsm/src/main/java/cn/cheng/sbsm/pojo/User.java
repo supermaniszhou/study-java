@@ -20,7 +20,8 @@ public class User {
     private String password;
     //    @NotNull
     private String role;
-    @NotBlank(message = "{user.username}")
+    //    @NotBlank(message = "{user.username}")
+    @NotBlank(message = "用户名不可为空")
     private String username;
 //    @Email
 //    private String email;
