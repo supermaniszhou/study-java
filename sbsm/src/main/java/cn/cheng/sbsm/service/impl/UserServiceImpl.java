@@ -4,6 +4,7 @@ import cn.cheng.sbsm.mapper.UserMapper;
 import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +28,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+//    使用缓存
+    @Cacheable(value = "users")
     public List<User> selectAllUser() {
         return userMapper.selectAllUser();
     }

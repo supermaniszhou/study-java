@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 
 /**
@@ -13,7 +14,9 @@ import javax.validation.constraints.NotBlank;
  */
 @Getter
 @Setter
-public class User {
+public class User implements Serializable {
+
+
     private int id;
     @NotBlank(message = "密码不能为空")
     @Length(min = 6, max = 12, message = "最小长度为6位，最大长度为12位")

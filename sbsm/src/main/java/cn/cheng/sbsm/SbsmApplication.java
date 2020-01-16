@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
@@ -12,6 +13,8 @@ import org.springframework.context.annotation.Bean;
 @ServletComponentScan
 //用于mybatis 扫描mapper 接口
 @MapperScan({"cn.cheng.sbsm.mapper"})
+//激活缓存
+@EnableCaching
 public class SbsmApplication {
 
     public static void main(String[] args) {
