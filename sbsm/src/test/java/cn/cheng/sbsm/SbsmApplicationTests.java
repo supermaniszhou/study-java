@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
@@ -53,6 +54,15 @@ class SbsmApplicationTests {
     void get() {
         LinkedHashMap map = (LinkedHashMap) rts.opsForValue().get("user");
         System.out.println(map.toString());
+    }
+    @Test
+    void testSetUserJson(){
+        User user = new User();
+        user.setId(100);
+        user.setUsername("zhangsan");
+        user.setPassword("111111");
+        user.setRole("admin");
+        rts.opsForValue().set("user_json",user);
     }
 //    @Autowired
 //    private UserService userService;

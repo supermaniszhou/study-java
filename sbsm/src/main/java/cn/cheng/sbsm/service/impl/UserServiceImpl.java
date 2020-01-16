@@ -5,6 +5,7 @@ import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -23,8 +24,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = false, rollbackFor = Exception.class)
-    //@CacheEvict(value="users",allEntries=true) 清除缓存中以users缓存策略缓存的对象
-    @CacheEvict(value = "users", allEntries = true)
+    @CachePut(value = "users", key = "#user.id")
     public void insertUser(User user) {
         userMapper.insertUser(user);
 //        int i = 1 / 0;
@@ -44,13 +44,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = false, rollbackFor = Exception.class)
-    @CacheEvict(value = "users", allEntries = true)
+    @CachePut(value = "users", key = "#user.id")
     public void updateUser(User user) {
         userMapper.updateUser(user);
     }
 
     @Override
     @Transactional(readOnly = false, rollbackFor = Exception.class)
+    //@CacheEvict(value="users",allEntries=true) 清除缓存中以users缓存策略缓存的对象
     //allEntries是boolean类型，表示是否需要清除缓存中的所有元素。默认为false，表示不需要。当指定了allEntries为true时，Spring Cache将忽略指定的key。
     @CacheEvict(value = "users", allEntries = true)
     public void deleteUserById(int id) {

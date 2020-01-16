@@ -36,7 +36,7 @@ public class UserController extends BaseController {
         try {
             if (!result.hasErrors()) {
                 userService.insertUser(user);
-                return "redirect:toListPage";
+                return "forward:toListPage";
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
