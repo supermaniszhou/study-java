@@ -121,6 +121,11 @@
             <artifactId>druid</artifactId>
             <version>1.1.6</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
@@ -149,7 +154,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!--            设置项目编码（UTF-8）和 指定 jre（jdk ）版本-->
+            <!--  设置项目编码（UTF-8）和 指定 jre（jdk ）版本-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
