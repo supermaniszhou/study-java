@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,6 +28,9 @@ class SbsmApplicationTests {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private StringRedisTemplate redisTemplate;
+
     @Test
     void contextLoads() {
         List<User> list = userService.selectAllUser();
@@ -47,6 +51,17 @@ class SbsmApplicationTests {
         list2.stream().forEach(u -> {
             System.out.println(u.toString());
         });
+    }
+
+    @Test
+    void testRedis() {
+        redisTemplate.opsForValue().set("a", "test");
+    }
+
+    @Test
+    void testRedisget() {
+        String s = redisTemplate.opsForValue().get("a");
+        System.out.println(s);
     }
 
 }
