@@ -2,8 +2,11 @@ package cn.cheng.sbsm.pojo;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 
 /**
  * 周刘成   2020-1-14
@@ -12,12 +15,15 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class User {
     private int id;
-    @NotNull
+    @NotBlank(message = "密码不能为空")
+    @Length(min = 6, max = 12, message = "最小长度为6位，最大长度为12位")
     private String password;
-//    @NotNull
+    //    @NotNull
     private String role;
-    @NotNull
+    @NotBlank(message = "{user.username}")
     private String username;
+//    @Email
+//    private String email;
 
     @Override
     public String toString() {

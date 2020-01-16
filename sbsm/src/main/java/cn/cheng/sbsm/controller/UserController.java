@@ -3,19 +3,20 @@ package cn.cheng.sbsm.controller;
 import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.util.List;
-import java.util.Map;
 
 
 /**
  * 周刘成   2020-1-14
  */
-@RestController
+@Controller
 @RequestMapping(value = "/user")
 public class UserController extends BaseController {
 
@@ -23,21 +24,24 @@ public class UserController extends BaseController {
     private UserService userService;
 
     @RequestMapping(value = "/toAddUser")
-    public ModelAndView toAddUser() {
+    public ModelAndView toAddUser(@ModelAttribute("msg") User user) {
         ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/addUser");
         return modelAndView;
     }
 
     @PostMapping(value = "/doSave")
-    public ModelAndView doSave(@Validated User user, HttpServletRequest request) {
+    public String doSave(@ModelAttribute("msg") @Valid User user, BindingResult result) {
         user.setId((int) (Math.random() * 10000 + 1));
         user.setRole("admin");
         try {
-            userService.insertUser(user);
+            if (!result.hasErrors()) {
+                userService.insertUser(user);
+                return "redirect:toListPage";
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return new ModelAndView("forward:toListPage");
+        return "views/user/addUser";
     }
 
     @RequestMapping(value = "/toListPage")

@@ -4,8 +4,9 @@
 <title>添加用户</title>
 <body>
 <form th:action="@{/user/doSave}" method="post">
-    用户姓名：<input type="text" name="username"/><br/>
-    用户密码：<input type="text" name="password"/><br/>
+    用户姓名：<input type="text" name="username"/><span style="color:red" th:errors="${msg.username}"></span><br/>
+    用户密码：<input type="text" name="password"/><span style="color:red" th:errors="${msg.password}"></span><br/>
+    用户角色：<input type="text" name="role"/><span style="color:red" th:errors="${msg.role}"></span><br/>
     <input type="submit" value="确定"/><br/>
 </form>
 </body>
