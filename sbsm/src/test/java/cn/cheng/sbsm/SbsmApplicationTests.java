@@ -1,6 +1,6 @@
 package cn.cheng.sbsm;
 
-import cn.cheng.sbsm.jpa.UserRepository;
+import cn.cheng.sbsm.jpa.*;
 import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -8,6 +8,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
@@ -29,6 +33,69 @@ import java.util.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 class SbsmApplicationTests {
+    @Autowired
+    private UserPageAndSort pageAndSort;
+
+    //分页 start
+    @Test
+    void testSort() {
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        List<User> list = (List<User>) pageAndSort.findAll(sort);
+        list.stream().forEach(u -> {
+            System.out.println(u);
+        });
+    }
+
+    @Test
+    void testPage() {
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(1, 5, sort);
+        Page<User> page = pageAndSort.findAll(pageable);
+        List<User> list = page.getContent();
+        list.stream().forEach(u -> {
+            System.out.println(u.toString());
+        });
+    }
+//分页 end
+
+
+    @Autowired
+    private UserCrudRepository userCrudRepository;
+
+    /**
+     * CrudRepository测试
+     */
+    @Test
+    void testSave() {
+        User user = new User();
+        user.setId(9);
+        user.setUsername("tiantian");
+        user.setPassword("111111");
+        this.userCrudRepository.save(user);
+    }
+
+    @Test
+    public void testCrudRepositoryFindOne() {
+        Optional<User> users = this.userCrudRepository.findById(7);
+        System.out.println(users.get().toString());
+    }
+
+    @Test
+    public void testFindAll() {
+        List<User> users = (List<User>) this.userCrudRepository.findAll();
+        users.stream().forEach(u -> {
+            System.out.println(u.toString());
+        });
+    }
+
+    @Test
+    public void testdelete() {
+        this.userCrudRepository.deleteById(7);
+    }
+
+    /**
+     * CrudRepository测试    end
+     */
 
     @Autowired
     @Qualifier("objectRedisTemplate")
@@ -83,6 +150,53 @@ class SbsmApplicationTests {
         this.userRepository.save(user);
     }
 
+
+    @Autowired
+    private UserRepositoryBy by;
+
+    @Test
+    void tetby() {
+        List<User> list = this.by.findByUsername("zhang");
+        for (User users : list) {
+            System.out.println(users);
+        }
+    }
+
+    @Test
+    void tetbyLike() {
+        List<User> list = this.by.findByUsernameLike("zhang%");
+        for (User users : list) {
+            System.out.println(users);
+        }
+    }
+
+    /**
+     * test query
+     */
+
+    @Autowired
+    UserRepositoryQuery query;
+
+    @Test
+    void testQueryHql() {
+        List<User> list = this.query.queryByUsernameHql("zhang");
+        for (User users : list) {
+            System.out.println(users);
+        }
+    }
+
+    @Test
+    void testQuerySql() {
+        List<User> list = this.query.queryByUsernameSql("zhang");
+        for (User users : list) {
+            System.out.println(users);
+        }
+    }
+
+    @Test
+    void testUpdate() {
+        this.query.updateUserByID("tititi", 7);
+    }
 
 //    @Autowired
 //    private UserService userService;

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10ed1114-4e66-4fc3-93c1-0b9e6199cb2b" name="Default Changelist" comment="springboot 异常处理">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/jpa/UserCrudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/jpa/UserPageAndSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/jpa/UserRepositoryBy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/jpa/UserRepositoryQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lucene01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lucene01/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lucene01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lucene01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/cheng/sbsm/SbsmApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/cheng/sbsm/SbsmApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,9 +46,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -103,7 +105,7 @@
       <recent name="D:\gitcode\study-java\sbsm\src\main\resources\templates\views\fileupload" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SbsmApplicationTests.testSetUserJson">
+  <component name="RunManager" selected="JUnit.SbsmApplicationTests.testPage">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -116,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SbsmApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SbsmApplicationTests.testCrudRepositoryFindOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sbsm" />
       <extension name="coverage">
         <pattern>
@@ -126,14 +128,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.cheng.sbsm" />
       <option name="MAIN_CLASS_NAME" value="cn.cheng.sbsm.SbsmApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="METHOD_NAME" value="testCrudRepositoryFindOne" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SbsmApplicationTests.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SbsmApplicationTests.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sbsm" />
       <extension name="coverage">
         <pattern>
@@ -143,14 +145,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.cheng.sbsm" />
       <option name="MAIN_CLASS_NAME" value="cn.cheng.sbsm.SbsmApplicationTests" />
-      <option name="METHOD_NAME" value="get" />
+      <option name="METHOD_NAME" value="testFindAll" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SbsmApplicationTests.testSetUserJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SbsmApplicationTests.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sbsm" />
       <extension name="coverage">
         <pattern>
@@ -160,14 +162,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.cheng.sbsm" />
       <option name="MAIN_CLASS_NAME" value="cn.cheng.sbsm.SbsmApplicationTests" />
-      <option name="METHOD_NAME" value="testSetUserJson" />
+      <option name="METHOD_NAME" value="testPage" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SbsmApplicationTests.tetCreateString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SbsmApplicationTests.testSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sbsm" />
       <extension name="coverage">
         <pattern>
@@ -177,24 +179,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.cheng.sbsm" />
       <option name="MAIN_CLASS_NAME" value="cn.cheng.sbsm.SbsmApplicationTests" />
-      <option name="METHOD_NAME" value="tetCreateString" />
+      <option name="METHOD_NAME" value="testSort" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRedis.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SbsmApplicationTests.testdelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sbsm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.cheng.sbsm.test.*" />
+          <option name="PATTERN" value="cn.cheng.sbsm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.cheng.sbsm.test" />
-      <option name="MAIN_CLASS_NAME" value="cn.cheng.sbsm.test.TestRedis" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="cn.cheng.sbsm" />
+      <option name="MAIN_CLASS_NAME" value="cn.cheng.sbsm.SbsmApplicationTests" />
+      <option name="METHOD_NAME" value="testdelete" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -235,11 +237,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SbsmApplicationTests.testSetUserJson" />
-        <item itemvalue="JUnit.SbsmApplicationTests.tetCreateString" />
-        <item itemvalue="JUnit.SbsmApplicationTests.get" />
-        <item itemvalue="JUnit.SbsmApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.TestRedis.contextLoads" />
+        <item itemvalue="JUnit.SbsmApplicationTests.testPage" />
+        <item itemvalue="JUnit.SbsmApplicationTests.testSort" />
+        <item itemvalue="JUnit.SbsmApplicationTests.testdelete" />
+        <item itemvalue="JUnit.SbsmApplicationTests.testFindAll" />
+        <item itemvalue="JUnit.SbsmApplicationTests.testCrudRepositoryFindOne" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +277,9 @@
       <workItem from="1579073651161" duration="7395000" />
       <workItem from="1579135161335" duration="13776000" />
       <workItem from="1579156114688" duration="67000" />
-      <workItem from="1579156457006" duration="10767000" />
+      <workItem from="1579156457006" duration="11700000" />
+      <workItem from="1579221512988" duration="9533000" />
+      <workItem from="1579231318757" duration="2394000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1578980060548</created>
@@ -403,7 +407,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579165091750</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="修改cacheput">
+      <created>1579167341939</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579167341939</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ehcache.xml">
+      <created>1579167933686</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579167933686</updated>
+    </task>
+    <task id="LOCAL-00021" summary="springboot 异常处理">
+      <created>1579226567955</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1579226567955</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,9 +440,11 @@
     <MESSAGE value="add" />
     <MESSAGE value="ehcache" />
     <MESSAGE value="redis 工具类" />
-    <MESSAGE value="springboot 异常处理" />
     <MESSAGE value="redis集成" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis集成" />
+    <MESSAGE value="修改cacheput" />
+    <MESSAGE value="ehcache.xml" />
+    <MESSAGE value="springboot 异常处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="springboot 异常处理" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1853" y="77" width="1160" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579075496367">
@@ -429,10 +456,10 @@
     </state>
     <state x="605" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578904850113" />
     <state x="1704" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579161386733" />
-    <state x="1835" y="-93" width="1101" height="822" key="CommitChangelistDialog2" timestamp="1579165089822">
+    <state x="1835" y="-93" width="1101" height="822" key="CommitChangelistDialog2" timestamp="1579226566445">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
-    <state x="1835" y="-93" width="1101" height="822" key="CommitChangelistDialog2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579165089822" />
+    <state x="1835" y="-93" width="1101" height="822" key="CommitChangelistDialog2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579226566445" />
     <state width="409" height="466" key="DebuggerActiveHint" timestamp="1578994062418">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
@@ -442,66 +469,66 @@
     </state>
     <state x="603" y="219" key="FileChooserDialogImpl/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578903185027" />
     <state x="1840" y="-39" width="1152" height="678" key="FileChooserDialogImpl/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579163812441" />
-    <state width="1876" height="199" key="GridCell.Tab.0.bottom" timestamp="1579166168616">
+    <state width="1876" height="280" key="GridCell.Tab.0.bottom" timestamp="1579231286080">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293672" />
-    <state width="1876" height="199" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166168616" />
-    <state width="1876" height="199" key="GridCell.Tab.0.center" timestamp="1579166168616">
+    <state width="1876" height="280" key="GridCell.Tab.0.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286080" />
+    <state width="1876" height="280" key="GridCell.Tab.0.center" timestamp="1579231286080">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.center/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293671" />
-    <state width="1876" height="199" key="GridCell.Tab.0.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166168616" />
-    <state width="1876" height="199" key="GridCell.Tab.0.left" timestamp="1579166168615">
+    <state width="1876" height="280" key="GridCell.Tab.0.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286080" />
+    <state width="1876" height="280" key="GridCell.Tab.0.left" timestamp="1579231286080">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.left/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293671" />
-    <state width="1876" height="199" key="GridCell.Tab.0.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166168615" />
-    <state width="1876" height="199" key="GridCell.Tab.0.right" timestamp="1579166168616">
+    <state width="1876" height="280" key="GridCell.Tab.0.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286080" />
+    <state width="1876" height="280" key="GridCell.Tab.0.right" timestamp="1579231286080">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.0.right/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293672" />
-    <state width="1876" height="199" key="GridCell.Tab.0.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166168616" />
-    <state width="1876" height="260" key="GridCell.Tab.1.bottom" timestamp="1579166115937">
+    <state width="1876" height="280" key="GridCell.Tab.0.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286080" />
+    <state width="1876" height="280" key="GridCell.Tab.1.bottom" timestamp="1579231286081">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.bottom/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="260" key="GridCell.Tab.1.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115937" />
-    <state width="1876" height="260" key="GridCell.Tab.1.center" timestamp="1579166115936">
+    <state width="1876" height="280" key="GridCell.Tab.1.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286081" />
+    <state width="1876" height="280" key="GridCell.Tab.1.center" timestamp="1579231286080">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.center/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="260" key="GridCell.Tab.1.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115936" />
-    <state width="1876" height="260" key="GridCell.Tab.1.left" timestamp="1579166115936">
+    <state width="1876" height="280" key="GridCell.Tab.1.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286080" />
+    <state width="1876" height="280" key="GridCell.Tab.1.left" timestamp="1579231286080">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.left/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293571" />
-    <state width="1876" height="260" key="GridCell.Tab.1.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115936" />
-    <state width="1876" height="260" key="GridCell.Tab.1.right" timestamp="1579166115936">
+    <state width="1876" height="280" key="GridCell.Tab.1.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286080" />
+    <state width="1876" height="280" key="GridCell.Tab.1.right" timestamp="1579231286081">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.1.right/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="260" key="GridCell.Tab.1.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115936" />
-    <state width="1876" height="260" key="GridCell.Tab.2.bottom" timestamp="1579166115937">
+    <state width="1876" height="280" key="GridCell.Tab.1.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286081" />
+    <state width="1876" height="280" key="GridCell.Tab.2.bottom" timestamp="1579231286081">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.bottom/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293573" />
-    <state width="1876" height="260" key="GridCell.Tab.2.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115937" />
-    <state width="1876" height="260" key="GridCell.Tab.2.center" timestamp="1579166115937">
+    <state width="1876" height="280" key="GridCell.Tab.2.bottom/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286081" />
+    <state width="1876" height="280" key="GridCell.Tab.2.center" timestamp="1579231286081">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.center/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293573" />
-    <state width="1876" height="260" key="GridCell.Tab.2.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115937" />
-    <state width="1876" height="260" key="GridCell.Tab.2.left" timestamp="1579166115937">
+    <state width="1876" height="280" key="GridCell.Tab.2.center/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286081" />
+    <state width="1876" height="280" key="GridCell.Tab.2.left" timestamp="1579231286081">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.left/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293572" />
-    <state width="1876" height="260" key="GridCell.Tab.2.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115937" />
-    <state width="1876" height="260" key="GridCell.Tab.2.right" timestamp="1579166115937">
+    <state width="1876" height="280" key="GridCell.Tab.2.left/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286081" />
+    <state width="1876" height="280" key="GridCell.Tab.2.right" timestamp="1579231286081">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state width="1273" height="195" key="GridCell.Tab.2.right/0.0.1600.870/1600.-180.1920.1080@0.0.1600.870" timestamp="1578906293573" />
-    <state width="1876" height="260" key="GridCell.Tab.2.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579166115937" />
+    <state width="1876" height="280" key="GridCell.Tab.2.right/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579231286081" />
     <state x="2090" y="14" key="Maven.ArtifactSearchDialog" timestamp="1579073911054">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
@@ -510,10 +537,10 @@
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state x="1761" y="-63" key="SettingsEditor/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579138012543" />
-    <state x="1788" y="15" key="Vcs.Push.Dialog.v2" timestamp="1579165094050">
+    <state x="1788" y="15" key="Vcs.Push.Dialog.v2" timestamp="1579226569834">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
-    <state x="1788" y="15" key="Vcs.Push.Dialog.v2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579165094050" />
+    <state x="1788" y="15" key="Vcs.Push.Dialog.v2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579226569834" />
     <state x="1692" y="-88" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578961995532">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
@@ -538,8 +565,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/cn/cheng/sbsm/SbsmApplicationTests.java</url>
-          <line>54</line>
+          <line>122</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/service/impl/UserServiceImpl.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/service/impl/UserServiceImpl.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
