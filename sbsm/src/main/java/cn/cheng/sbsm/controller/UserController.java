@@ -36,7 +36,7 @@ public class UserController extends BaseController {
         try {
             if (!result.hasErrors()) {
                 userService.insertUser(user);
-                return "forward:toListPage";
+//                return "forward:toListPage";
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -47,7 +47,7 @@ public class UserController extends BaseController {
     @RequestMapping(value = "/toListPage")
     public ModelAndView toListPage() {
         ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/listUser");
-        List<User> list = userService.selectAllUser();
+        List<User> list = userService.selectAllUser(new User());
         modelAndView.addObject("list", list);
         return modelAndView;
     }
@@ -57,7 +57,9 @@ public class UserController extends BaseController {
         ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/editUser");
         User user = null;
         try {
-            user = userService.selectUserById(id);
+            User u=new User();
+            u.setId(id);
+            user = userService.selectUserById(u);
         } catch (Exception e) {
             e.printStackTrace();
         }

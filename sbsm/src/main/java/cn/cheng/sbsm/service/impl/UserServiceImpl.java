@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = false, rollbackFor = Exception.class)
-    @CachePut(value = "users", key = "#user.id")
+    @CacheEvict(value = "users", allEntries = true)
     public void insertUser(User user) {
         userMapper.insertUser(user);
 //        int i = 1 / 0;
@@ -32,14 +32,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
 //    使用缓存
-    @Cacheable(value = "users")
-    public List<User> selectAllUser() {
+    @Cacheable(value = "users",key = "#user.id")
+    public List<User> selectAllUser(User user) {
         return userMapper.selectAllUser();
     }
 
     @Override
-    public User selectUserById(int id) {
-        return userMapper.selectUserById(id);
+    @Cacheable(value = "users",key = "#user.id")
+    public User selectUserById(User user) {
+        return userMapper.selectUserById(user.getId());
     }
 
     @Override

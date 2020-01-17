@@ -1,5 +1,6 @@
 package cn.cheng.sbsm;
 
+import cn.cheng.sbsm.jpa.UserRepository;
 import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -55,15 +56,34 @@ class SbsmApplicationTests {
         LinkedHashMap map = (LinkedHashMap) rts.opsForValue().get("user");
         System.out.println(map.toString());
     }
+
     @Test
-    void testSetUserJson(){
+    void testSetUserJson() {
         User user = new User();
         user.setId(100);
         user.setUsername("zhangsan");
         user.setPassword("111111");
         user.setRole("admin");
-        rts.opsForValue().set("user_json",user);
+        rts.opsForValue().set("user_json", user);
     }
+
+    @Autowired
+    private UserRepository userRepository;
+
+    /**
+     * test jpa
+     */
+    @Test
+    void testJpa() {
+        User user = new User();
+        user.setId(7);
+        user.setUsername("titi");
+        user.setPassword("1111111");
+        user.setRole("yu");
+        this.userRepository.save(user);
+    }
+
+
 //    @Autowired
 //    private UserService userService;
 

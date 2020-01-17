@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
@@ -14,9 +17,11 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
+@Entity
+@Table(name = "SYS_USER")
 public class User implements Serializable {
 
-
+    @Id
     private int id;
     @NotBlank(message = "密码不能为空")
     @Length(min = 6, max = 12, message = "最小长度为6位，最大长度为12位")
