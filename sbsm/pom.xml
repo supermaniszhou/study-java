@@ -45,6 +45,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- Sprng tx 坐标 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
 
 
         <!-- Spring Data Redis的启动器 -->

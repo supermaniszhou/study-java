@@ -1,5 +1,6 @@
 package cn.cheng.sbsm.schedule;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
@@ -11,6 +12,12 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
  */
 @Configuration
 public class QuartzConfig {
+
+    //这个非常重要，如果没有这一句就会报空指针，在job中无法注入service,  就是把MyAdaptableJobFactory注入,
+    //在schedulerFactoryBean方法中  factory.setJobFactory(jobFactory);
+    @Autowired
+    private MyAdaptableJobFactory jobFactory;
+
     /**
      * 1.创建Job对象
      */
@@ -40,6 +47,7 @@ public class QuartzConfig {
     @Bean
     public SchedulerFactoryBean schedulerFactoryBean(CronTriggerFactoryBean cronTriggerFactoryBean) {
         SchedulerFactoryBean factory = new SchedulerFactoryBean();
+        factory.setJobFactory(jobFactory);
         //关联trigger
         factory.setTriggers(cronTriggerFactoryBean.getObject());
         return factory;
