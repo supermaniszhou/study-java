@@ -97,6 +97,9 @@ class SbsmApplicationTests {
      * CrudRepository测试    end
      */
 
+    /**
+     * redis 测试 start
+     */
     @Autowired
     @Qualifier("objectRedisTemplate")
     private RedisTemplate<String, Object> rts;
