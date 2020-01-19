@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10ed1114-4e66-4fc3-93c1-0b9e6199cb2b" name="Default Changelist" comment="springboot 异常处理">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/schedule/MyAdaptableJobFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/service/DemoServic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lucene01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lucene01/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lucene01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lucene01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sbsm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sbsm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/schedule/QuartzConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/schedule/QuartzConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/schedule/QuartzDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cheng/sbsm/schedule/QuartzDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +295,7 @@
       <workItem from="1579239934780" duration="146000" />
       <workItem from="1579240361531" duration="12511000" />
       <workItem from="1579395417084" duration="85000" />
-      <workItem from="1579395525282" duration="13915000" />
+      <workItem from="1579395525282" duration="14119000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1578980060548</created>
@@ -483,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579402893271</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="事务">
+      <created>1579420169391</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1579420169391</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +503,8 @@
     <MESSAGE value="ehcache.xml" />
     <MESSAGE value="定时任务quartz" />
     <MESSAGE value="springboot 异常处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="springboot 异常处理" />
+    <MESSAGE value="事务" />
+    <option name="LAST_COMMIT_MESSAGE" value="事务" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2152" y="17" key="#Assign_Data_Sources" timestamp="1579241531489">
@@ -520,10 +524,10 @@
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state x="2211" y="284" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579400756441" />
-    <state x="1835" y="-93" width="1101" height="822" key="CommitChangelistDialog2" timestamp="1579402892536">
+    <state x="1981" y="-97" width="1101" height="822" key="CommitChangelistDialog2" timestamp="1579420168622">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
-    <state x="1835" y="-93" width="1101" height="822" key="CommitChangelistDialog2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579402892536" />
+    <state x="1981" y="-97" width="1101" height="822" key="CommitChangelistDialog2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579420168622" />
     <state width="409" height="466" key="DebuggerActiveHint" timestamp="1578994062418">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
@@ -601,10 +605,10 @@
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
     <state x="1761" y="-63" key="SettingsEditor/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579395502611" />
-    <state x="1788" y="15" key="Vcs.Push.Dialog.v2" timestamp="1579402894758">
+    <state x="1788" y="15" key="Vcs.Push.Dialog.v2" timestamp="1579420170965">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
-    <state x="1788" y="15" key="Vcs.Push.Dialog.v2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579402894758" />
+    <state x="1788" y="15" key="Vcs.Push.Dialog.v2/0.0.1600.870/1600.-180.1920.1080@1600.-180.1920.1080" timestamp="1579420170965" />
     <state x="1692" y="-88" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578961995532">
       <screen x="1600" y="-180" width="1920" height="1080" />
     </state>
