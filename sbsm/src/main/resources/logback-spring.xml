@@ -8,37 +8,41 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 
     <!-- 定义日志的根目录 -->
     <property name="log.path" value="/app/log"/>
+    <property name="maxFileSize" value="10MB" />
+    <!-- 日志最大的历史 30天 -->
+    <property name="maxHistory" value="30" />
     <!-- 定义日志文件名称 -->
     <property name="appName" value="atguigu-springboot"></property>
+<!--    生产和测试是不需要控制台输出的-->
     <!--表示控制台输出 ch.qos.logback.core.ConsoleAppender 表示控制台输出 -->
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息-->
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>info</level>
-        </filter>
-        <encoder>
-            <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
-            <!-- 设置字符集 -->
-            <charset>UTF-8</charset>
-        </encoder>
-        <!--
-        日志输出格式：
-			%d表示日期时间，
-			%thread表示线程名，
-			%-5level：级别从左显示5个字符宽度
-			%logger{50} 表示logger名字最长50个字符，否则按照句点分割。 
-			%msg：日志消息，
-			%n是换行符
-        -->
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <springProfile name="dev">
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} ----> [%thread] ---> %-5level %logger{50} - %msg%n</pattern>
-            </springProfile>
-            <springProfile name="!dev">
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} ==== [%thread] ==== %-5level %logger{50} - %msg%n</pattern>
-            </springProfile>
-        </layout>
-    </appender>
+<!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        &lt;!&ndash;此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息&ndash;&gt;-->
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>info</level>-->
+<!--        </filter>-->
+<!--        <encoder>-->
+<!--            <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>-->
+<!--            &lt;!&ndash; 设置字符集 &ndash;&gt;-->
+<!--            <charset>UTF-8</charset>-->
+<!--        </encoder>-->
+<!--        &lt;!&ndash;-->
+<!--        日志输出格式：-->
+<!--			%d表示日期时间，-->
+<!--			%thread表示线程名，-->
+<!--			%-5level：级别从左显示5个字符宽度-->
+<!--			%logger{50} 表示logger名字最长50个字符，否则按照句点分割。 -->
+<!--			%msg：日志消息，-->
+<!--			%n是换行符-->
+<!--        &ndash;&gt;-->
+<!--        <layout class="ch.qos.logback.classic.PatternLayout">-->
+<!--            <springProfile name="dev">-->
+<!--                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} &#45;&#45;&ndash;&gt; [%thread] -&ndash;&gt; %-5level %logger{50} - %msg%n</pattern>-->
+<!--            </springProfile>-->
+<!--            <springProfile name="!dev">-->
+<!--                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} ==== [%thread] ==== %-5level %logger{50} - %msg%n</pattern>-->
+<!--            </springProfile>-->
+<!--        </layout>-->
+<!--    </appender>-->
 
     <!--输出到文件-->
     <!-- 时间滚动输出 level为 DEBUG 日志 -->
@@ -55,10 +59,10 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
             <!-- 日志归档 -->
             <fileNamePattern>${log.path}/debug/log-debug-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
+                <maxFileSize>${maxFileSize}</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <!--日志文件保留天数-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>${maxHistory}</maxHistory>
         </rollingPolicy>
         <!-- 此日志文件只记录debug级别的 -->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -81,10 +85,10 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
             <!-- 每天日志归档路径以及格式 -->
             <fileNamePattern>${log.path}/info/log-info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
+                <maxFileSize>${maxFileSize}</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <!--日志文件保留天数-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>${maxHistory}</maxHistory>
         </rollingPolicy>
         <!-- 此日志文件只记录info级别的 -->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -106,10 +110,10 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.path}/warn/log-warn-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
+                <maxFileSize>${maxFileSize}</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <!--日志文件保留天数-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>${maxHistory}</maxHistory>
         </rollingPolicy>
         <!-- 此日志文件只记录warn级别的 -->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -131,10 +135,10 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.path}/error/log-error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
+                <maxFileSize>${maxFileSize}</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <!--日志文件保留天数-->
-            <maxHistory>15</maxHistory>
+            <maxHistory>${maxHistory}</maxHistory>
         </rollingPolicy>
         <!-- 此日志文件只记录ERROR级别的 -->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -174,7 +178,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
     </springProfile>
 
     <root level="info">
-        <appender-ref ref="CONSOLE"/>
+<!--        <appender-ref ref="CONSOLE"/>-->
         <appender-ref ref="DEBUG_FILE"/>
         <appender-ref ref="INFO_FILE"/>
         <appender-ref ref="WARN_FILE"/>
@@ -192,38 +196,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
     <!--</root>-->
     <!--</springProfile>-->
 
-    <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件 -->
-<!--    <appender name="appLogAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-<!--        &lt;!&ndash; 指定日志文件的名称 &ndash;&gt;-->
-<!--        <file>${LOG_HOME}/${appName}.log</file>-->
-<!--        &lt;!&ndash;-->
-<!--        当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名-->
-<!--        TimeBasedRollingPolicy： 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责出发滚动。-->
-<!--        &ndash;&gt;-->
-<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
-<!--            &lt;!&ndash;-->
-<!--            滚动时产生的文件的存放位置及文件名称 %d{yyyy-MM-dd}：按天进行日志滚动 -->
-<!--            %i：当文件大小超过maxFileSize时，按照i进行文件滚动-->
-<!--            &ndash;&gt;-->
-<!--            <fileNamePattern>${LOG_HOME}/${appName}-%d{yyyy-MM-dd}-%i.log</fileNamePattern>-->
-<!--            &lt;!&ndash; -->
-<!--            可选节点，控制保留的归档文件的最大数量，超出数量就删除旧文件。假设设置每天滚动，-->
-<!--            且maxHistory是365，则只保存最近365天的文件，删除之前的旧文件。注意，删除旧文件是，-->
-<!--            那些为了归档而创建的目录也会被删除。-->
-<!--            &ndash;&gt;-->
-<!--            <MaxHistory>365</MaxHistory>-->
-<!--            &lt;!&ndash; -->
-<!--            当日志文件超过maxFileSize指定的大小是，根据上面提到的%i进行日志文件滚动 注意此处配置SizeBasedTriggeringPolicy是无法实现按文件大小进行滚动的，必须配置timeBasedFileNamingAndTriggeringPolicy-->
-<!--            &ndash;&gt;-->
-<!--            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
-<!--                <maxFileSize>100MB</maxFileSize>-->
-<!--            </timeBasedFileNamingAndTriggeringPolicy>-->
-<!--        </rollingPolicy>-->
-<!--        &lt;!&ndash; 日志输出格式： &ndash;&gt;-->
-<!--        <layout class="ch.qos.logback.classic.PatternLayout">-->
-<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [ %thread ] - [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>-->
-<!--        </layout>-->
-<!--    </appender>-->
+
 
     <!-- 
 		logger主要用于存放日志对象，也可以定义日志类型、级别
@@ -234,16 +207,16 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 		表示当前logger的appender-ref和rootLogger的appender-ref都有效
     -->
     <!-- hibernate logger -->
-<!--    <logger name="com.atguigu" level="debug"/>-->
-<!--    &lt;!&ndash; Spring framework logger &ndash;&gt;-->
-<!--    <logger name="org.springframework" level="debug" additivity="false"></logger>-->
+    <!--    <logger name="com.atguigu" level="debug"/>-->
+    <!--    &lt;!&ndash; Spring framework logger &ndash;&gt;-->
+    <!--    <logger name="org.springframework" level="debug" additivity="false"></logger>-->
 
 
     <!--
     root与logger是父子关系，没有特别定义则默认为root，任何一个类只会和一个logger对应，
     要么是定义的logger，要么是root，判断的关键在于找到这个logger，然后判断这个logger的appender和level。 
     -->
-<!--    <root level="info">-->
+<!--    <root level="debug">-->
 <!--        <appender-ref ref="stdout"/>-->
 <!--        <appender-ref ref="appLogAppender"/>-->
 <!--    </root>-->
