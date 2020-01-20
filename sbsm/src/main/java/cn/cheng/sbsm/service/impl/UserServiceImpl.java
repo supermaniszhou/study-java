@@ -3,6 +3,8 @@ package cn.cheng.sbsm.service.impl;
 import cn.cheng.sbsm.mapper.UserMapper;
 import cn.cheng.sbsm.pojo.User;
 import cn.cheng.sbsm.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -19,6 +21,8 @@ import java.util.List;
 @Service
 @Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
+
+    private Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
     @Autowired
     private UserMapper userMapper;
 
@@ -32,13 +36,19 @@ public class UserServiceImpl implements UserService {
 
     @Override
 //    使用缓存
-    @Cacheable(value = "users",key = "#user.id")
+    @Cacheable(value = "users", key = "#user.id")
     public List<User> selectAllUser(User user) {
+        try {
+//            int i = 1 / 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage());
+        }
         return userMapper.selectAllUser();
     }
 
     @Override
-    @Cacheable(value = "users",key = "#user.id")
+    @Cacheable(value = "users", key = "#user.id")
     public User selectUserById(User user) {
         return userMapper.selectUserById(user.getId());
     }
