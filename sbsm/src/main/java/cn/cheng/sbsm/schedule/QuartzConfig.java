@@ -10,7 +10,7 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 /**
  * 周刘成   2020-1-19
  */
-@Configuration
+//@Configuration
 public class QuartzConfig {
 
     //这个非常重要，如果没有这一句就会报空指针，在job中无法注入service,  就是把MyAdaptableJobFactory注入,

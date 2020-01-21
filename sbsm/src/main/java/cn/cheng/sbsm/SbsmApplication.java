@@ -20,7 +20,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //激活缓存
 @EnableCaching
 //激活定时任务,这个是schedule框架的使用，使用quartz也要这个注解
-@EnableScheduling
+//@EnableScheduling
 public class SbsmApplication {
 
     public static void main(String[] args) throws SchedulerException {
