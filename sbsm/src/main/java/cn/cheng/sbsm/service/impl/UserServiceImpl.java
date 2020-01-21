@@ -6,9 +6,7 @@ import cn.cheng.sbsm.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +16,7 @@ import java.util.List;
 /**
  * 周刘成   2020-1-14
  */
+@CacheConfig(cacheNames = "users")
 @Service
 @Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
@@ -28,7 +27,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = false, rollbackFor = Exception.class)
-    @CacheEvict(value = "users", allEntries = true)
+    @CacheEvict(/*value = "users",*/ allEntries = true)
     public void insertUser(User user) {
         userMapper.insertUser(user);
 //        int i = 1 / 0;
@@ -36,7 +35,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
 //    使用缓存
-    @Cacheable(value = "users")
+    @Cacheable(cacheNames = "users")
     public List<User> selectAllUser() {
         try {
 //            int i = 1 / 0;
@@ -56,8 +55,9 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(readOnly = false, rollbackFor = Exception.class)
     @CachePut(value = "users", key = "#user.id")
-    public void updateUser(User user) {
+    public User updateUser(User user) {
         userMapper.updateUser(user);
+        return user;
     }
 
     @Override
@@ -67,5 +67,19 @@ public class UserServiceImpl implements UserService {
     @CacheEvict(value = "users", allEntries = true)
     public void deleteUserById(int id) {
         userMapper.deleteUserById(id);
+    }
+
+    @Caching(
+            cacheable = {
+                    @Cacheable(key = "#id")
+            },
+            put = {
+                    @CachePut(key = "#result.username"),
+                    @CachePut(key = "#result.password")
+            }
+    )
+    public User test(int id) {
+
+        return new User();
     }
 }

@@ -24,7 +24,9 @@ public class GlobalExceptionPlugin implements HandlerExceptionResolver {
         if (e instanceof NullPointerException) {
             modelAndView.setViewName("error2");
         }
-        modelAndView.addObject("error", e.toString());
+        if(e instanceof Exception){
+            modelAndView.addObject("error", e.toString());
+        }
         return modelAndView;
     }
 }
