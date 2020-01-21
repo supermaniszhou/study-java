@@ -36,8 +36,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
 //    使用缓存
-    @Cacheable(value = "users", key = "#user.id")
-    public List<User> selectAllUser(User user) {
+    @Cacheable(value = "users")
+    public List<User> selectAllUser() {
         try {
 //            int i = 1 / 0;
         } catch (Exception e) {

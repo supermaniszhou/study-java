@@ -47,7 +47,7 @@ public class UserController extends BaseController {
     @RequestMapping(value = "/toListPage")
     public ModelAndView toListPage() {
         ModelAndView modelAndView = new ModelAndView(VIEW_PATH + "user/listUser");
-        List<User> list = userService.selectAllUser(new User());
+        List<User> list = userService.selectAllUser();
         modelAndView.addObject("list", list);
         return modelAndView;
     }

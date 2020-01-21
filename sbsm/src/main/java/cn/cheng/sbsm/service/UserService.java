@@ -10,7 +10,7 @@ import java.util.List;
 public interface UserService {
     void insertUser(User user);
 
-    List<User> selectAllUser(User user);
+    List<User> selectAllUser();
 
     User selectUserById(User user);
 
