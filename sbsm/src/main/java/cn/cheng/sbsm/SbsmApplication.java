@@ -11,6 +11,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
@@ -23,6 +24,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //激活定时任务,这个是schedule框架的使用，使用quartz也要这个注解
 //@EnableScheduling
 @EnableRabbit//激活消息队列注解
+
+@EnableAsync//开启异步任务
 public class SbsmApplication {
 
     public static void main(String[] args) throws SchedulerException {
