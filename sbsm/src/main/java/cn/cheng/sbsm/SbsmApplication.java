@@ -4,6 +4,7 @@ import cn.cheng.sbsm.schedule.QuartzDemo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -21,6 +22,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableCaching
 //激活定时任务,这个是schedule框架的使用，使用quartz也要这个注解
 //@EnableScheduling
+@EnableRabbit//激活消息队列注解
 public class SbsmApplication {
 
     public static void main(String[] args) throws SchedulerException {
