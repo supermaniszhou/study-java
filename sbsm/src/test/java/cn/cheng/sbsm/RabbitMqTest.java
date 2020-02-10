@@ -1,7 +1,12 @@
 package cn.cheng.sbsm;
 
+import cn.cheng.sbsm.pojo.Book;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.core.AmqpAdmin;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -33,6 +38,13 @@ public class RabbitMqTest {
     }
 
     @Test
+    public void testBook() {
+        Map<String, Object> map = new HashMap<>();
+        //发送的消息序列化默认是采用的jdk的序列化方式，可以添加配置文件以json方式发送数据。
+        template.convertAndSend("exchange.direct", "atguigu.news", new Book("tttt", "tom"));
+    }
+
+    @Test
     public void receiver() {
         Object o = template.receiveAndConvert("atguigu");
         System.out.println(o.getClass());
@@ -48,5 +60,15 @@ public class RabbitMqTest {
         map.put("msg", "hello world");
         map.put("data", Arrays.asList("test", 123, true));
         template.convertAndSend("exchange.fanout", "", map);
+    }
+
+    @Autowired
+    AmqpAdmin amqpAdmin;
+
+    @Test
+    public void create() {
+//        amqpAdmin.declareExchange(new DirectExchange("exchang.amqp"));
+//        amqpAdmin.declareQueue(new Queue("queue.create"));
+        amqpAdmin.declareBinding(new Binding("queue.create", Binding.DestinationType.QUEUE, "exchang.amqp", "amqp.haha", null));
     }
 }

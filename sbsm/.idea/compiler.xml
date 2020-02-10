@@ -10,11 +10,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="rabbitmq" target="1.8" />
       <module name="sbsm" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rabbitmq" options="-parameters" />
       <module name="sbsm" options="-parameters" />
     </option>
   </component>
