@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e546e193-17d3-4e3c-9638-9f2dfeffe4bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/test2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis调用webserice依赖的jar/axis-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis调用webserice依赖的jar/axis-jaxrpc-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis调用webserice依赖的jar/axis-saaj-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis调用webserice依赖的jar/commons-discovery-0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis调用webserice依赖的jar/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis调用webserice依赖的jar/wsdl4j-1.4.jar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,9 +42,11 @@
   <component name="ProjectId" id="1hUL8a69fJfXRWDN2oB233L0VmC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -57,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WetherTest">
+  <component name="RunManager" selected="Application.test2">
     <configuration name="WetherTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.com.WetherTest" />
       <module name="com" />
@@ -84,8 +91,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.com.test2" />
+      <module name="com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test2" />
         <item itemvalue="Application.WetherTest" />
         <item itemvalue="Application.test" />
       </list>
@@ -103,8 +124,18 @@
       <updated>1600060565903</updated>
       <workItem from="1600060568804" duration="708000" />
       <workItem from="1600066008128" duration="2825000" />
-      <workItem from="1600069025337" duration="543000" />
+      <workItem from="1600069025337" duration="1922000" />
+      <workItem from="1600223968794" duration="2280000" />
+      <workItem from="1600227936684" duration="670000" />
     </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1600069884836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600069884836</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,10 +146,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
 </project>
